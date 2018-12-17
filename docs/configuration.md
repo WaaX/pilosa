@@ -127,7 +127,7 @@ The config file is in the [toml format](https://github.com/toml-lang/toml) and h
       port = 11101
     ```
 
-#### Gossip Seeds
+#### Gossip seeds
 
 * Description: This specifies which internal host(s) should be used to initialize membership in the cluster. Typically this can be the address of any available host in the cluster. For example, when starting a three-node cluster made up of `node0`, `node1`, and `node2`, the `gossip.seeds` for all three nodes can be configured to be the address of `node0`. Multiple seeds should be comma-separated in the flag and env forms.
 * Flag: `--gossip.seeds="localhost:11101,localhost:11110"`
@@ -318,7 +318,7 @@ A three node cluster running on different hosts could be minimally configured as
     
     [gossip]
       port = 12000
-      seed = "node0.pilosa.com:12000"
+      seeds = "node0.pilosa.com:12000"
 
     [cluster]
       replicas = 1
@@ -331,7 +331,7 @@ A three node cluster running on different hosts could be minimally configured as
     
     [gossip]
       port = 12000
-      seed = "node0.pilosa.com:12000"
+      seeds = "node0.pilosa.com:12000"
 
     [cluster]
       replicas = 1
@@ -344,7 +344,7 @@ A three node cluster running on different hosts could be minimally configured as
     
     [gossip]
       port = 12000
-      seed = "node0.pilosa.com:12000"
+      seeds = "node0.pilosa.com:12000"
 
     [cluster]
       replicas = 1
@@ -362,7 +362,7 @@ The same cluster which uses HTTPS instead of HTTP can be configured as follows. 
 
     [gossip]
       port = 12000
-      seed = "node0.pilosa.com:12000"
+      seeds = "node0.pilosa.com:12000"
       key = "/home/pilosa/private/gossip.key32"
 
     [cluster]
@@ -380,7 +380,7 @@ The same cluster which uses HTTPS instead of HTTP can be configured as follows. 
 
     [gossip]
       port = 12000
-      seed = "node0.pilosa.com:12000"
+      seeds = "node0.pilosa.com:12000"
       key = "/home/pilosa/private/gossip.key32"
 
     [cluster]
@@ -398,7 +398,7 @@ The same cluster which uses HTTPS instead of HTTP can be configured as follows. 
 
     [gossip]
       port = 12000
-      seed = "node0.pilosa.com:12000"
+      seeds = "node0.pilosa.com:12000"
       key = "/home/pilosa/private/gossip.key32"
 
     [cluster]
@@ -420,7 +420,7 @@ You can run a cluster on the same host using the configuration above with a few 
 
     [gossip]
       port = 12000
-      seed = "localhost:12000"
+      seeds = "localhost:12000"
       key = "/home/pilosa/private/gossip.key32"
 
     [cluster]
@@ -438,7 +438,7 @@ You can run a cluster on the same host using the configuration above with a few 
 
     [gossip]
       port = 12001
-      seed = "localhost:12000"
+      seeds = "localhost:12000"
       key = "/home/pilosa/private/gossip.key32"
 
     [cluster]
@@ -456,7 +456,7 @@ You can run a cluster on the same host using the configuration above with a few 
 
     [gossip]
       port = 12002
-      seed = "localhost:12000"
+      seeds = "localhost:12000"
       key = "/home/pilosa/private/gossip.key32"
 
     [cluster]
